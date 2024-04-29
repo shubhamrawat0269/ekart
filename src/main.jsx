@@ -1,14 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 
 import { ThemeProvider } from "@material-tailwind/react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { NoPage, HomePage } from "./pages";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+    // errorElement: <Nopage />,
+  },
+  {
+    path: "/*",
+    element: <NoPage />,
+    // errorElement: <Nopage />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      <App />
+      <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
 );
