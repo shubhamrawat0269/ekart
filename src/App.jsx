@@ -1,5 +1,5 @@
 function App() {
-  return <div>Hello EKart</div>;
+  return <div className="underline">Hello EKart</div>;
 }
 
 export default App;
