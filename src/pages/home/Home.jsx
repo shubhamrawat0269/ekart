@@ -5,6 +5,7 @@ import {
   Category,
   HomePageProductCard,
   Track,
+  Testimonial,
 } from "../../components";
 
 const HomePage = () => {
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Category />
       <HomePageProductCard />
       <Track />
+      <Testimonial />
     </Layout>
   );
 };
