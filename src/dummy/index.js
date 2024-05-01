@@ -36,3 +36,18 @@ export const searchData = [
       "https://i.pinimg.com/564x/fd/50/68/fd50688767adb47aba7204f034554cbd.jpg",
   },
 ];
+
+export const heroSectionData = [
+  {
+    id: "enIN988IN988&sxsrf001",
+    image: "images/hero_img1.png",
+  },
+  {
+    id: "enIN988IN988&sxsrf002",
+    image: "images/hero_img2.png",
+  },
+  {
+    id: "enIN988IN988&sxsrf003",
+    image: "images/hero_img3.png",
+  },
+];
