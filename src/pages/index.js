@@ -1,4 +1,5 @@
 import HomePage from "./home/Home";
 import NoPage from "./noPage/NoPage";
+import ProductInfo from "./productInfo/ProductInfo";
 
-export { NoPage, HomePage };
+export { NoPage, HomePage, ProductInfo };

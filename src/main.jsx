@@ -5,7 +5,8 @@ import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { NoPage, HomePage } from "./pages";
+import { ScrollTop } from "./components";
+import { NoPage, HomePage, ProductInfo } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -18,12 +19,19 @@ const router = createBrowserRouter([
     element: <NoPage />,
     // errorElement: <Nopage />,
   },
+  {
+    path: "/productinfo",
+    element: <ProductInfo />,
+    // errorElement: <Nopage />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
+      {/* <ScrollTop> */}
       <RouterProvider router={router} />
+      {/* </ScrollTop> */}
     </ThemeProvider>
   </React.StrictMode>
 );
