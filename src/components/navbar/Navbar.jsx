@@ -6,7 +6,7 @@ const Navbar = () => {
   // navList Data
 
   return (
-    <nav className="bg-orange-400 sticky top-0">
+    <nav className="bg-orange-400">
       <div className="lg:flex lg:justify-between items-center py-3 lg:px-3 ">
         {/* left  */}
         <div className="flex flex-col lg:flex-row items-center gap-4 left py-3 lg:py-0">
