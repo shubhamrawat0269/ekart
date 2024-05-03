@@ -5,7 +5,7 @@ import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { NoPage, HomePage, ProductInfo } from "./pages";
+import { NoPage, HomePage, ProductInfo, CartPage } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/productinfo",
     element: <ProductInfo />,
+    // errorElement: <Nopage />,
+  },
+  {
+    path: "/cart",
+    element: <CartPage />,
     // errorElement: <Nopage />,
   },
 ]);
