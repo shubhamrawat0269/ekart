@@ -3,12 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavList = () => {
   return (
-    <ul className="flex space-x-3 text-white font-medium text-md px-5 ">
-      {/* Home */}
-      <li>
-        <Link to={"/"}>Home</Link>
-      </li>
-
+    <ul className="flex gap-[2rem] text-gray-700 space-x-3 font-medium text-md px-5 ">
       {/* All Product */}
       <li>
         <Link to={"/allproduct"}>All Product</Link>
