@@ -20,9 +20,9 @@ const NavList = () => {
       </li>
 
       {/* Admin */}
-      {/* <li>
-                <Link to={'/'}>Admin</Link>
-            </li> */}
+      <li>
+        <Link to={"/admin-dashboard"}>Admin</Link>
+      </li>
 
       {/* logout */}
       {/* <li>

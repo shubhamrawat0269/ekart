@@ -7,6 +7,7 @@ import {
   Signup,
   Login,
   UserDashboard,
+  AdminDashboard,
 } from "./pages";
 
 const routes = [
@@ -48,6 +49,11 @@ const routes = [
   {
     path: "/user-dashboard",
     element: <UserDashboard />,
+    // errorElement: <Nopage />,
+  },
+  {
+    path: "/admin-dashboard",
+    element: <AdminDashboard />,
     // errorElement: <Nopage />,
   },
 ];

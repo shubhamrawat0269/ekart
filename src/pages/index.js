@@ -6,6 +6,7 @@ import AllProduct from "./allProduct/AllProduct";
 import Login from "./registration/Login";
 import Signup from "./registration/Signup";
 import UserDashboard from "./user/UserDashboard";
+import AdminDashboard from "./admin/AdminDashboard";
 
 export {
   NoPage,
@@ -16,4 +17,5 @@ export {
   AllProduct,
   Signup,
   Login,
+  AdminDashboard,
 };
