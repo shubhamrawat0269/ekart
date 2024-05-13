@@ -5,5 +5,15 @@ import CartPage from "./cart/CartPage";
 import AllProduct from "./allProduct/AllProduct";
 import Login from "./registration/Login";
 import Signup from "./registration/Signup";
+import UserDashboard from "./user/UserDashboard";
 
-export { NoPage, HomePage, ProductInfo, CartPage, AllProduct, Signup, Login };
+export {
+  NoPage,
+  HomePage,
+  ProductInfo,
+  UserDashboard,
+  CartPage,
+  AllProduct,
+  Signup,
+  Login,
+};

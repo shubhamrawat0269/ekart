@@ -21,7 +21,7 @@ const NavList = () => {
 
       {/* User */}
       <li>
-        <Link to={"/"}>Shubham</Link>
+        <Link to={"/user-dashboard"}>Shubham</Link>
       </li>
 
       {/* Admin */}

@@ -13,6 +13,7 @@ import {
   AllProduct,
   Signup,
   Login,
+  UserDashboard,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+    // errorElement: <Nopage />,
+  },
+  {
+    path: "/user-dashboard",
+    element: <UserDashboard />,
     // errorElement: <Nopage />,
   },
 ]);
