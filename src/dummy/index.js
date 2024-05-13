@@ -311,3 +311,16 @@ export const dashboardProducts = [
     quantity: 1,
   },
 ];
+
+// dashboard product data
+export const testimonialData = [
+  {
+    id: 1,
+    title:
+      "Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
+    imageSrc:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/54a510de-a406-41b2-8d62-7f8c587c9a7e/air-force-1-07-lv8-shoes-9KwrSk.png",
+    author: "Ram Kamal Singh",
+    profession: "Web Developer",
+  },
+];

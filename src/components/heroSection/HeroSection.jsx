@@ -1,9 +1,5 @@
+import Carousel from "../carousel/Carousel";
 import { heroSectionData } from "../../dummy";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/bundle";
-import "swiper/css/autoplay";
-import { Navigation, Autoplay } from "swiper/modules";
 
 const HeroSection = () => {
   return (
@@ -31,27 +27,7 @@ const HeroSection = () => {
           {/* hero Image section here  */}
 
           <div className="flex order-1 md:order-2 justify-center items-center md:p-[2.5rem]">
-            <Swiper
-              slidesPerView={1}
-              autoplay={{ delay: 1500 }}
-              modules={[Navigation, Autoplay]}
-              pagination={{ clickable: true }}
-              className="swiper"
-            >
-              {heroSectionData.map((cur) => {
-                return (
-                  <SwiperSlide>
-                    <div className="bg-white rounded-xl shadow-3xl">
-                      <img
-                        className="md:h-[30rem] md:w-[50rem] p-[1.25rem]"
-                        src={cur.image}
-                        alt={`heroImg${cur.id}`}
-                      />
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+            <Carousel data={heroSectionData} type={"heroData"} />
           </div>
         </div>
       </div>

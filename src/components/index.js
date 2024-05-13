@@ -4,6 +4,7 @@ import HomePageProductCard from "./homePageProductCard/HomePageProductCard";
 import Track from "./track/Track";
 import Testimonial from "./testimonial/Testimonial";
 import ScrollTop from "./scrollTop/ScrollTop";
+import Carousel from "./carousel/Carousel";
 
 export {
   HeroSection,
@@ -12,4 +13,5 @@ export {
   Track,
   Testimonial,
   ScrollTop,
+  Carousel,
 };

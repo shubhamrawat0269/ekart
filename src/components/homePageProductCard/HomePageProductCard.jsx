@@ -20,7 +20,7 @@ const HomePageProductCard = () => {
             {productData.map((item, index) => {
               const { image, title, price } = item;
               return (
-                <div key={index} className="p-4 w-full md:w-1/4">
+                <div key={index} className="p-[4rem] md:p-2 w-full md:w-1/4">
                   <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                     <img
                       className="lg:h-80  h-96 w-full"
@@ -40,7 +40,7 @@ const HomePageProductCard = () => {
                       </h1>
 
                       <div className="flex justify-center ">
-                        <button className=" bg-pink-500 hover:bg-pink-600 w-full text-white py-[4px] rounded-lg font-bold">
+                        <button className=" bg-red-500 text-white p-2 hover:bg-red-900 w-full rounded-lg font-bold">
                           Add To Cart
                         </button>
                       </div>
