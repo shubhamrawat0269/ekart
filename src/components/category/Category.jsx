@@ -5,7 +5,7 @@ const Category = () => {
   return (
     <div>
       <div className="flex flex-col mt-5">
-        <div className="flex overflow-x-auto lg:justify-center  hide-scroll-bar">
+        <div className="flex overflow-x-auto lg:justify-center  md:hide-scroll-bar">
           <div className="flex ">
             {/* category  */}
 
