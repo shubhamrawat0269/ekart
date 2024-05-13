@@ -8,6 +8,8 @@ import {
   Login,
   UserDashboard,
   AdminDashboard,
+  AddProductPage,
+  UpdateProductPage,
 } from "./pages";
 
 const routes = [
@@ -54,6 +56,16 @@ const routes = [
   {
     path: "/admin-dashboard",
     element: <AdminDashboard />,
+    // errorElement: <Nopage />,
+  },
+  {
+    path: "/addproduct",
+    element: <AddProductPage />,
+    // errorElement: <Nopage />,
+  },
+  {
+    path: "/updateproduct",
+    element: <UpdateProductPage />,
     // errorElement: <Nopage />,
   },
 ];
