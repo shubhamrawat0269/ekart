@@ -5,6 +5,8 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 const Carousel = ({ type, data }) => {
   const getCarouselData = (type, data) => {
+    console.log({ type, data });
+
     switch (type) {
       case "heroData": {
         return (
@@ -34,7 +36,7 @@ const Carousel = ({ type, data }) => {
       case "testimonialinfo": {
         return (
           <Swiper
-            slidesPerView={2}
+            slidesPerView={1}
             autoplay={{ delay: 1500 }}
             modules={[Navigation, Autoplay]}
             pagination={{ clickable: true }}
@@ -42,19 +44,21 @@ const Carousel = ({ type, data }) => {
           >
             {data.map((cur) => {
               return (
-                <div key={cur.id} className="h-full text-center">
-                  <img
-                    alt="testimonial"
-                    className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                    src={cur.imageSrc}
-                  />
-                  <p className="leading-relaxed">{cur.title}</p>
-                  <span className="inline-block h-1 w-10 rounded bg-orange-500 mt-6 mb-4" />
-                  <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">
-                    {cur.author}
-                  </h2>
-                  <p className="text-gray-500">{cur.profession}</p>
-                </div>
+                <SwiperSlide>
+                  <div key={cur.id} className="h-full text-center">
+                    <img
+                      alt="testimonial"
+                      className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+                      src={cur.imageSrc}
+                    />
+                    <p className="leading-relaxed">{cur.title}</p>
+                    <span className="inline-block h-1 w-10 rounded bg-orange-500 mt-6 mb-4" />
+                    <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">
+                      {cur.author}
+                    </h2>
+                    <p className="text-gray-500">{cur.profession}</p>
+                  </div>
+                </SwiperSlide>
               );
             })}
           </Swiper>

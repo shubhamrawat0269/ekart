@@ -14,7 +14,7 @@ const Testimonial = () => {
           </h1>
           {/* para  */}
           <h2 className=" text-center text-2xl font-semibold mb-10">
-            What our <span className=" text-pink-500">customers</span> are
+            What our <span className=" text-orange-500">customers</span> are
             saying
           </h2>
 
@@ -23,7 +23,7 @@ const Testimonial = () => {
             {/* Testimonial 1 */}
             {/* <div className="lg:w-1/3 lg:mb-0 mb-6 p-4"> */}
             <div className="">
-              <Carousel data={testimonialData} type={"testimonialinfo"} />
+              <Carousel data={testimonialData} type="testimonialinfo" />
             </div>
           </div>
         </div>
