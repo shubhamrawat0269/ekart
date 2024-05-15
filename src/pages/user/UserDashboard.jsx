@@ -1,3 +1,4 @@
+import { User } from "lucide-react";
 import Layout from "../../components/layout/Layout";
 import { dashboardProducts } from "../../dummy";
 
@@ -10,13 +11,12 @@ const UserDashboard = () => {
         {/* Top  */}
         <div className="top ">
           {/* main  */}
-          <div className=" bg-pink-50 py-5 rounded-xl border border-pink-100">
+          <div className=" bg-orange-500 py-5 rounded-xl border border-pink-100">
             {/* image  */}
-            <div className="flex justify-center">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png"
-                alt=""
-              />
+            <div className="flex justify-center items-center">
+              <div className="bg-gray-100 my-3 rounded-full w-[6rem] p-2">
+                <User size={80} color="grey" />
+              </div>
             </div>
             {/* text  */}
             <div className="">
@@ -47,9 +47,9 @@ const UserDashboard = () => {
             <h2 className="text-2xl lg:text-3xl font-bold">Order Details</h2>
 
             {/* main 2 */}
-            <div className="mt-5 flex flex-col overflow-hidden rounded-xl border border-pink-100 md:flex-row">
+            <div className="mt-5 flex flex-col overflow-hidden rounded-xl border border-orange-500 md:flex-row">
               {/* main 3  */}
-              <div className="w-full border-r border-pink-100 bg-pink-50 md:max-w-xs">
+              <div className="w-full border-r border-pink-100 bg-orange-500 md:max-w-xs">
                 {/* left  */}
                 <div className="p-8">
                   <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-1">
@@ -77,8 +77,8 @@ const UserDashboard = () => {
                     </div>
 
                     <div className="mb-4">
-                      <div className="text-sm font-semibold">Order Status</div>
-                      <div className="text-sm font-medium text-green-800">
+                      <div className="text-sm font-semibold mb-1">Order Status</div>
+                      <div className="text-sm font-medium bg-green-800 inline p-1 rounded-lg text-green-200">
                         Confirmed
                       </div>
                     </div>
