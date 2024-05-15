@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavList = () => {
+const NavList = ({ dispatchLogout, user }) => {
   return (
     <ul className="flex gap-[2rem] text-gray-700 space-x-3 font-medium text-md px-5 ">
       {/* All Product */}
@@ -25,9 +25,11 @@ const NavList = () => {
       </li>
 
       {/* logout */}
-      {/* <li>
-                logout
-            </li> */}
+      {user && (
+        <li className="cursor-pointer" onClick={dispatchLogout}>
+          logout
+        </li>
+      )}
 
       {/* Cart */}
       <li>

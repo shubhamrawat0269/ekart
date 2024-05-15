@@ -1,10 +1,10 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
-  const name = "Kamla Rawat";
-  const contexts = { name };
+  const [loading, setLoading] = useState(false);
+  const contexts = { loading, setLoading };
 
   return (
     <GlobalContext.Provider value={contexts}>{children}</GlobalContext.Provider>

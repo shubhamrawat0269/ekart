@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SearchBar from "../searchBar/SearchBar";
 import NavList from "./NavList";
 
 const Navbar = () => {
-  // navList Data
+  const user = JSON.parse(localStorage.getItem("users"));
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.clear("users");
+    navigate("/login");
+  };
 
   return (
     <nav className="bg-yellow-50">
@@ -16,7 +22,7 @@ const Navbar = () => {
             </h1>
           </Link>
           <div className="right flex justify-center mb-4 lg:mb-0">
-            <NavList />
+            <NavList user={user} dispatchLogout={logout}/>
           </div>
         </div>
 

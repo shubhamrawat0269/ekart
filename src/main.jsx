@@ -9,12 +9,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routes from "./Routes";
 
 const router = createBrowserRouter(routes);
+import { Toaster } from "react-hot-toast";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <GlobalProvider>
       <ThemeProvider>
         <RouterProvider router={router} />
+        <Toaster position="top-right" reverseOrder={false} />
       </ThemeProvider>
     </GlobalProvider>
   </React.StrictMode>

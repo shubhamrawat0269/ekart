@@ -3,12 +3,13 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDBHTUtOeuCON7AEF3UPPxU1sHsnFfBv-M",
-  authDomain: "ecommerce-for.firebaseapp.com",
-  projectId: "ecommerce-for",
-  storageBucket: "ecommerce-for.appspot.com",
-  messagingSenderId: "609664686595",
-  appId: "1:609664686595:web:302bf25cc8efa64a4e4c36",
+  apiKey: "AIzaSyC-4m25a-6rlZt7OEVNECU3iACnKiyOHEQ",
+  authDomain: "ekart-f667b.firebaseapp.com",
+  projectId: "ekart-f667b",
+  storageBucket: "ekart-f667b.appspot.com",
+  messagingSenderId: "746765884798",
+  appId: "1:746765884798:web:6d141de2920e9c6df8a72f",
+  measurementId: "G-TC7ZJH3J6N",
 };
 
 const app = initializeApp(firebaseConfig);
