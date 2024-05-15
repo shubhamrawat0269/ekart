@@ -11,6 +11,8 @@ import {
   AddProductPage,
   UpdateProductPage,
 } from "./pages";
+import { ProtectedRouteForAdmin } from "./protectedRoute/ProtectedRouteForAdmin";
+import { ProtectedRouteForUser } from "./protectedRoute/ProtectedRouteForUser";
 
 const routes = [
   {
@@ -50,22 +52,38 @@ const routes = [
   },
   {
     path: "/user-dashboard",
-    element: <UserDashboard />,
+    element: (
+      <ProtectedRouteForUser>
+        <UserDashboard />
+      </ProtectedRouteForUser>
+    ),
     // errorElement: <Nopage />,
   },
   {
     path: "/admin-dashboard",
-    element: <AdminDashboard />,
+    element: (
+      <ProtectedRouteForAdmin>
+        <AdminDashboard />
+      </ProtectedRouteForAdmin>
+    ),
     // errorElement: <Nopage />,
   },
   {
     path: "/addproduct",
-    element: <AddProductPage />,
+    element: (
+      <ProtectedRouteForAdmin>
+        <AddProductPage />
+      </ProtectedRouteForAdmin>
+    ),
     // errorElement: <Nopage />,
   },
   {
     path: "/updateproduct",
-    element: <UpdateProductPage />,
+    element: (
+      <ProtectedRouteForAdmin>
+        <UpdateProductPage />
+      </ProtectedRouteForAdmin>
+    ),
     // errorElement: <Nopage />,
   },
 ];
