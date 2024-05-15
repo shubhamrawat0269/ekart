@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Link, useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 import { useState } from "react";
@@ -7,7 +6,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, fireDB } from "../../firebase/FirebaseConfig";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import Loader from "../../components/loader/Loader";
-
+import { Eye } from "lucide-react";
 const Login = () => {
   const { loading, setLoading } = useGlobalContext();
   const navigate = useNavigate();
@@ -16,6 +15,8 @@ const Login = () => {
     email: "",
     password: "",
   });
+
+  const [passwordType, setPasswordType] = useState(true);
 
   const handleUserLogin = async () => {
     // validation apply
@@ -87,10 +88,9 @@ const Login = () => {
           />
         </div>
 
-        {/* Input Three  */}
-        <div className="mb-5">
+        <div className="mb-5 relative">
           <input
-            type="password"
+            type={passwordType ? "password" : "text"}
             placeholder="Password"
             value={userLogin.password}
             onChange={(e) => {
@@ -101,6 +101,12 @@ const Login = () => {
             }}
             className="bg-gray-50 border border-gray-400 px-2 py-2 w-96 rounded-md outline-none placeholder-gray-400"
           />
+          <div
+            className="absolute right-3 top-2 cursor-pointer"
+            onClick={() => setPasswordType(!passwordType)}
+          >
+            <Eye color="gray" />
+          </div>
         </div>
 
         {/* Signup Button  */}

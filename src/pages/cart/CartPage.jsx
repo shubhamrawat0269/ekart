@@ -2,6 +2,8 @@ import Layout from "../../components/layout/Layout";
 import { Trash } from "lucide-react";
 import { cartProducts } from "../../dummy";
 
+
+
 const CartPage = () => {
   return (
     <Layout>

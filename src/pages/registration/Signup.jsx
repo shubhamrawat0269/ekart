@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Link, useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 
@@ -8,6 +7,7 @@ import { auth, fireDB } from "../../firebase/FirebaseConfig";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
 import Loader from "../../components/loader/Loader";
 import toast from "react-hot-toast";
+import { Eye } from "lucide-react";
 
 const Signup = () => {
   const { loading, setLoading } = useGlobalContext();
@@ -20,6 +20,7 @@ const Signup = () => {
     password: "",
     role: "user",
   });
+  const [passwordType, setPasswordType] = useState(true);
 
   const handleUserSignup = async () => {
     // validation
@@ -117,9 +118,9 @@ const Signup = () => {
         </div>
 
         {/* Input Three  */}
-        <div className="mb-5">
+        <div className="mb-5 relative">
           <input
-            type="password"
+            type={passwordType ? "password" : "text"}
             placeholder="Password"
             value={userSignup.password}
             onChange={(e) => {
@@ -130,6 +131,12 @@ const Signup = () => {
             }}
             className="bg-gray-50 border border-gray-400 px-2 py-2 w-96 rounded-md outline-none placeholder-gray-400"
           />
+          <div
+            className="absolute right-3 top-2 cursor-pointer"
+            onClick={() => setPasswordType(!passwordType)}
+          >
+            <Eye color="gray" />
+          </div>
         </div>
 
         {/* Signup Button  */}
