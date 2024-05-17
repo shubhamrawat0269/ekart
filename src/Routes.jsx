@@ -26,7 +26,7 @@ const routes = [
     // errorElement: <Nopage />,
   },
   {
-    path: "/productinfo",
+    path: "/productinfo/:id",
     element: <ProductInfo />,
     // errorElement: <Nopage />,
   },
