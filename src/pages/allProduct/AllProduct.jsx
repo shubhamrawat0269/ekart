@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router";
 import Layout from "../../components/layout/Layout";
-import { allProductData } from "../../dummy";
+import { useGlobalContext } from "../../hooks/useGlobalContext";
 
 const AllProduct = () => {
   const navigate = useNavigate();
+  const { allProduct } = useGlobalContext();
+
   return (
     <Layout>
       <div className="py-8">
@@ -18,15 +20,16 @@ const AllProduct = () => {
         <section className="text-gray-600 body-font">
           <div className="container px-5 lg:px-0 py-5 mx-auto">
             <div className="flex flex-wrap -m-4">
-              {allProductData.map((item, index) => {
-                const { image, title, price } = item;
+              {allProduct.map((item, index) => {
+                const { productImageUrl, title, price } = item;
+                console.log(item);
                 return (
                   <div key={index} className="p-4 w-full md:w-1/4">
                     <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                       <img
                         onClick={() => navigate("/productinfo")}
                         className="lg:h-80  h-96 w-full"
-                        src={image}
+                        src={productImageUrl}
                         alt="blog"
                       />
                       <div className="p-6">
