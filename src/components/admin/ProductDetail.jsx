@@ -1,10 +1,26 @@
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 import Loader from "../loader/Loader";
+import { deleteDoc, doc } from "firebase/firestore";
+import { fireDB } from "../../firebase/FirebaseConfig";
+import toast from "react-hot-toast";
 
 const ProductDetail = () => {
-  const { loading, allProduct } = useGlobalContext();
-  console.log(allProduct);
+  const { loading, setLoading, allProduct, getAllProduct } = useGlobalContext();
+
+  const deleteProduct = async (id) => {
+    setLoading(true);
+    try {
+      await deleteDoc(doc(fireDB, "products", id));
+      toast.success("Product Deleted successfully");
+      getAllProduct();
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       <div className="py-5 flex justify-between items-center">
@@ -102,9 +118,12 @@ const ProductDetail = () => {
                     {date}
                   </td>
                   <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 text-green-500 cursor-pointer ">
-                    Edit
+                    <Link to={`/updateproduct/${id}`}>Edit</Link>
                   </td>
-                  <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 text-red-500 cursor-pointer ">
+                  <td
+                    onClick={() => deleteProduct(id)}
+                    className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 text-red-500 cursor-pointer "
+                  >
                     Delete
                   </td>
                 </tr>

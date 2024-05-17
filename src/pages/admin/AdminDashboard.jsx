@@ -6,9 +6,12 @@ import { User } from "lucide-react";
 import NumberIcon from "../../assets/number-svg";
 import BaggitIcon from "../../assets/baggit-svg";
 import PeopleIcon from "../../assets/muti-people";
+import { useGlobalContext } from "../../hooks/useGlobalContext";
 
 const AdminDashboard = () => {
   const user = JSON.parse(localStorage.getItem("users"));
+  const { allProduct } = useGlobalContext();
+
   return (
     <div>
       {/* Top */}
@@ -66,7 +69,9 @@ const AdminDashboard = () => {
                   <div className="w-12 h-12 mb-3 inline-block">
                     <BaggitIcon />
                   </div>
-                  <h2 className="title-font font-medium text-3xl fonts1">10</h2>
+                  <h2 className="title-font font-medium text-3xl fonts1">
+                    {allProduct.length}
+                  </h2>
                   <p className="font-bold">Total Products</p>
                 </div>
               </Tab>

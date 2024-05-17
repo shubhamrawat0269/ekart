@@ -31,7 +31,7 @@ const GlobalProvider = ({ children }) => {
     getAllProduct();
   }, []);
 
-  const contexts = { loading, setLoading, allProduct };
+  const contexts = { loading, setLoading, allProduct, getAllProduct };
 
   return (
     <GlobalContext.Provider value={contexts}>{children}</GlobalContext.Provider>

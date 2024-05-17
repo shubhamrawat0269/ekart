@@ -78,7 +78,7 @@ const routes = [
     // errorElement: <Nopage />,
   },
   {
-    path: "/updateproduct",
+    path: "/updateproduct/:id",
     element: (
       <ProtectedRouteForAdmin>
         <UpdateProductPage />
