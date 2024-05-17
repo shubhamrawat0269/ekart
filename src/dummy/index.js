@@ -333,3 +333,30 @@ export const testimonialData = [
     profession: "Web Developer",
   },
 ];
+
+export const addProductPageList = [
+  {
+    name: "fashion",
+  },
+  {
+    name: "shirt",
+  },
+  {
+    name: "jacket",
+  },
+  {
+    name: "mobile",
+  },
+  {
+    name: "laptop",
+  },
+  {
+    name: "shoes",
+  },
+  {
+    name: "home",
+  },
+  {
+    name: "books",
+  },
+];
