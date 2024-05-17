@@ -9,6 +9,7 @@ import UserDashboard from "./user/UserDashboard";
 import AdminDashboard from "./admin/AdminDashboard";
 import AddProductPage from "./admin/AddProductPage";
 import UpdateProductPage from "./admin/UpdateProductPage";
+import CategoryPage from "./category/CategoryPage";
 
 export {
   NoPage,
@@ -22,4 +23,5 @@ export {
   AdminDashboard,
   AddProductPage,
   UpdateProductPage,
+  CategoryPage,
 };

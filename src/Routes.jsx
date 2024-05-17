@@ -10,6 +10,7 @@ import {
   AdminDashboard,
   AddProductPage,
   UpdateProductPage,
+  CategoryPage,
 } from "./pages";
 import { ProtectedRouteForAdmin } from "./protectedRoute/ProtectedRouteForAdmin";
 import { ProtectedRouteForUser } from "./protectedRoute/ProtectedRouteForUser";
@@ -28,6 +29,11 @@ const routes = [
   {
     path: "/productinfo/:id",
     element: <ProductInfo />,
+    // errorElement: <Nopage />,
+  },
+  {
+    path: "/category/:categoryname",
+    element: <CategoryPage />,
     // errorElement: <Nopage />,
   },
   {
