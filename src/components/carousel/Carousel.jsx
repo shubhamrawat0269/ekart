@@ -5,8 +5,6 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 const Carousel = ({ type, data }) => {
   const getCarouselData = (type, data) => {
-    console.log({ type, data });
-
     switch (type) {
       case "heroData": {
         return (
